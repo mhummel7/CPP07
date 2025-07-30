@@ -6,11 +6,10 @@
 /*   By: mhummel <mhummel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 11:24:48 by mhummel           #+#    #+#             */
-/*   Updated: 2025/07/14 11:49:41 by mhummel          ###   ########.fr       */
+/*   Updated: 2025/07/30 10:11:15 by mhummel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// main.cpp
 #include "Array.hpp"
 #include <iostream>
 #include <string>

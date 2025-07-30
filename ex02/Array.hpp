@@ -6,11 +6,10 @@
 /*   By: mhummel <mhummel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 11:25:46 by mhummel           #+#    #+#             */
-/*   Updated: 2025/07/14 11:51:02 by mhummel          ###   ########.fr       */
+/*   Updated: 2025/07/30 10:11:21 by mhummel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Array.hpp
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
 

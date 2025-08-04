@@ -6,7 +6,7 @@
 /*   By: mhummel <mhummel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 11:15:58 by mhummel           #+#    #+#             */
-/*   Updated: 2025/07/14 11:49:32 by mhummel          ###   ########.fr       */
+/*   Updated: 2025/08/04 10:51:36 by mhummel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ void swap(T& a, T& b) {
 }
 
 template <typename T>
-T& min(T& a, T& b) {
-	return (a < b) ? a : b;
+const T& min(const T& a, const T& b) {
+	return (a <= b) ? b : a;
 }
 
 template <typename T>
-T& max(T& a, T& b) {
-	return (a > b) ? a : b;
+const T& max(const T& a, const T& b) {
+	return (a >= b) ? b : a;
 }
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mhummel <mhummel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 11:25:46 by mhummel           #+#    #+#             */
-/*   Updated: 2025/07/30 10:11:21 by mhummel          ###   ########.fr       */
+/*   Updated: 2025/08/04 10:26:32 by mhummel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <cstddef> // for size_t
 #include <exception>
+#include <stdexcept>
 
 template <typename T>
 class Array {
@@ -25,7 +26,11 @@ private:
 public:
 	Array() : _array(NULL), _size(0) {}
 
-	Array(unsigned int n) : _array(new T[n]()), _size(n) {}
+	Array(unsigned int n) : _array(new T[n]), _size(n) {
+		for (size_t i = 0; i < _size; ++i) {
+			_array[i] = T();
+		}
+	}
 
 	Array(const Array& other) : _array(new T[other._size]), _size(other._size) {
 		for (size_t i = 0; i < _size; ++i) {
@@ -51,14 +56,14 @@ public:
 
 	T& operator[](size_t i) {
 		if (i >= _size) {
-			throw std::exception();
+			throw std::out_of_range("Index out of bounds");
 		}
 		return _array[i];
 	}
 
 	const T& operator[](size_t i) const {
 		if (i >= _size) {
-			throw std::exception();
+			throw std::out_of_range("Index out of bounds");
 		}
 		return _array[i];
 	}
